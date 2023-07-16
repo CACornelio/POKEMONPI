@@ -1,0 +1,74 @@
+.detaillink {
+    background-color: #ff1f00;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+  
+  .detaillink:hover {
+    background-color: #ff3f1a;
+  }
+  
+  .detail {
+    background-color: #f7f7f7;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+  }
+  .detailp {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .detailp span {
+    margin-right: 5px;
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set the text color to black */
+  }
+  
+  
+  .detailh1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+  }
+  
+  .detail img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+  
+  .detailtype {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .detailtype span {
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: f7f7f7;
+    color: black;
+    text-transform: capitalize;
+    font-size: larger;
+  }
+  
+  .detailtype a {
+    color: #fff;
+    text-decoration: none;
+  }
+  

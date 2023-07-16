@@ -1,0 +1,27 @@
+.card {
+    background: red;
+    border: solid 2px black;
+    border-radius: 10px;
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+  }
+  
+  .images {
+    background-color: white;
+    border-radius: 15%;
+    border: 2px solid grey;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto;
+  }
+  
+  .types {
+    background-color: aliceblue;
+    align-items: center;
+  }
+  

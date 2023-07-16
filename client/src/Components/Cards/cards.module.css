@@ -1,0 +1,7 @@
+.cardscont{
+    display:flex;
+    flex-wrap: wrap;
+}
+.maincont{
+    text-align: center;
+}

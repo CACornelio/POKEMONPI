@@ -1,0 +1,116 @@
+/* Home Container */
+.homecontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(247, 247, 247, 0.5);
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  h1 {
+    font-size: 32px;
+    color: #ff1f00;
+    margin-bottom: 20px;
+  }
+  
+  /* Filters */
+  .filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    border: solid 1px black;
+  }
+  
+  .filters span {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .filters select {
+    font-size: 16px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    border: solid 1px black;
+  }
+  
+  /* Pagination */
+  .homepaginate {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .homepaginate button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff1f00;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Cards */
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .card img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .card .types {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .card .types span {
+    font-size: 16px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #ff1f00;
+    color: #fff;
+  }
+  
+  .card .types a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .card .types a:hover {
+    text-decoration: underline;
+  }
+  
