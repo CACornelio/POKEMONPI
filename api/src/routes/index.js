@@ -4,8 +4,8 @@ const { Router } = require('express');
 const {getPokemonByID} = require('../../controllers/getPokemonByID')
 const {getPokemonTypes} = require('../../controllers/getPokemonTypes');
 const { allPokemonhandler } = require('../../handlers/pokemonHandler');
-const { createPokemonHandler } = require('../../handlers/createPokemonHandler');
 const { getPokemonByName } = require('../../controllers/getPokemonByName');
+const { createPokemonDB } = require('../../controllers/createPokemon');
 
 const router = Router();
 
@@ -16,7 +16,7 @@ router.get("/pokemons",allPokemonhandler) //working
 router.get('/pokemons/:id', getPokemonByID) //id working, UUID working 7/7/23
 router.get('/pokemons',getPokemonByName) // working, brings list of all similar names in DB and API. 
 router.get('/types',getPokemonTypes) //types working.
-router.post('/pokemons', createPokemonHandler) //working with 2 types. example for use:"types": ["fire","water"]
+router.post('/pokemons', createPokemonDB) //working with 2 types. example for use:"types": ["fire","water"]
 
 
 

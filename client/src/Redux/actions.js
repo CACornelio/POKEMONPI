@@ -3,6 +3,8 @@ import { FILTER_BY_TYPES, GET_POKEMON, GET_TYPES,GET_NAME_POKEMON,GET_ID_POKEMON
 
 export function postPokemon(input){ //post working but allows duplicates
     return async function (dispatch) { //siempre que trabajes con una funcion async tienes que usar try catch. 
+       
+       
         try {
             const response = await axios.post("http://localhost:3001/pokemons",input )
             alert("Pokemon Created Successfully")
@@ -10,7 +12,7 @@ export function postPokemon(input){ //post working but allows duplicates
 
         } catch (error) {
             console.log(error);
-            alert("Pokemon Creation error: " + error.response.data.error);
+            alert("Pokemon Creation error: " + error.response.data);
         }
 
     }

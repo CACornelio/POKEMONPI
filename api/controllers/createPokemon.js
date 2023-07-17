@@ -29,9 +29,12 @@ const createPokemonDB = async (req, res, next) => { //Ruta de creacion del pokem
   
        return res.send("Pokemon creado exitosamente");
       }
-    } else{res.status(400).send("el Pokemon ya existe");}
+    } else{
+      alert("Pokemon already exists")
+      res.status(400).send("el Pokemon ya existe");
+    }
     } catch (err) {
-      res.status(400).send("Error en data");
+      res.status(400).send("Error en data - Puede que el pokemon ya exista");
     }
   }
   module.exports = {createPokemonDB}

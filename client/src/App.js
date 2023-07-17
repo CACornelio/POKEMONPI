@@ -10,11 +10,11 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-    <h1>POKEDEX</h1>
+    
     <Route path="/" exact component={landingPage} />
 <Route
   path={["/home", "/create", "/details/:id"]}
-  render={() => <NavBar />}
+  render={() => <><NavBar/> </>}
 />
       <Switch>
        

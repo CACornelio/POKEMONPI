@@ -15,11 +15,12 @@
   }
   
   .detail {
-    background-color: #f7f7f7;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(247, 247, 247, 0.5);
     padding: 20px;
-    text-align: center;
+    height: 100vh;
   }
   .detailp {
     font-size: 18px;
@@ -45,9 +46,9 @@
   
   .detail img {
     width: 100%;
-    max-height: 400px;
+    max-height: 200px;
     object-fit: contain;
-    margin-bottom: 20px;
+    margin: 20px;
   }
   
   .detailtype {

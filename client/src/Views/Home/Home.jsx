@@ -4,6 +4,7 @@ import style from './home.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { getPokemon, filterByType, filterIfCreated, orderByname, orderByAttack } from '../../Redux/actions'
 import { useState } from 'react'
+import Paginate from '../../Components/Paginate/Paginate'
 const Home = () => {
 
 
@@ -135,9 +136,8 @@ console.log(pokemon)
       {/* FILTERS AND ORDERING */}
 <div className={style.homepaginate}>
     <button onClick={prevPage}>Previous Page</button>
+   <Paginate pokemon={pokemon.length} pokemonPerPage={pokemonsPerPage} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
     <button onClick={nextPage}>Next Page</button>
-   
-        
     </div>
     <Cards pokemon={currentPokemons}> </Cards>
     </div>

@@ -25,14 +25,11 @@ export default function Detail(props) {
 
   return (
     <div>
-    <div >
-      <Link to="/home">
-        <button className={style.detaillink}>Return Home</button>
-      </Link>
-      </div>
+    
       <div className={style.detail }>
+        
         {state.loading ? (
-          <p className={style.detailp }>Loading...</p>
+          <p className={style.detailp }><img src={"https://i.imgur.com/kxd89UN.gif"} alt="" className={style.loadingimg} /></p>
         ) : myPokemon ? (
           <div>
             <h1 className={style.detailh1 }>{myPokemon.name}</h1>
@@ -50,8 +47,10 @@ export default function Detail(props) {
             <p>Height: {myPokemon.height}</p>
             <p>Weight: {myPokemon.weight}</p>
             <div className={style.detailtype }>
+            <h2>Type:</h2>
               {myPokemon.types?.map((t, index) => (
                 <span key={index}>
+                  
                   {t.name ? (
                     <span>{t.name}</span>
                   ) : (
@@ -65,7 +64,13 @@ export default function Detail(props) {
         ) : (
           <p className={style.detailp }>Pokemon no encontrado</p>
         )}
+        <div >
+      <Link to="/home">
+        <button className={style.detaillink}>Return Home</button>
+      </Link>
       </div>
+      </div>
+      
     </div>
   );
 }

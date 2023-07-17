@@ -1,0 +1,35 @@
+body {
+    /* Your default background style */
+    background-color: #f7f7f7;
+  }
+  
+  .landing-background {
+    /* Background image for the landing page */
+    background-image: url(https://wallpapercave.com/wp/XSbCZ4F.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  h1 {
+    font-size: 50px;
+  }
+  
+  .made {
+    margin-top: 50%;
+  }
+  
+  .enterbutton {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff1f00;
+    color: #fff;
+    cursor: pointer;
+    margin: 10%;
+  }
+  
+  .landing {
+    margin: 25%;
+  }
+  
