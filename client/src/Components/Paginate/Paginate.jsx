@@ -8,7 +8,7 @@ const Paginate = ({ pokemon, pokemonPerPage, setCurrentPage, currentPage }) => {
   }
   return (
     <div>
-      {pages.map((page, index) => {
+      {pages.map((page, index) => { // 
         return (
           <button
             key={index}

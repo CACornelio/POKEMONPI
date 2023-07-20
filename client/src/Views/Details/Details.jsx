@@ -18,7 +18,7 @@ export default function Detail(props) {
     
     setTimeout(() => {
       setState({ ...state, loading: false });
-    }, 2000);
+    }, 1200);
   }, [dispatch, id]);
 
   const myPokemon = useSelector((state) => state.detail);
@@ -30,24 +30,25 @@ export default function Detail(props) {
         
         {state.loading ? (
           <p className={style.detailp }><img src={"https://i.imgur.com/kxd89UN.gif"} alt="" className={style.loadingimg} /></p>
-        ) : myPokemon ? (
+        ) : myPokemon.name ? (
           <div>
             <h1 className={style.detailh1 }>{myPokemon.name}</h1>
             <div detailimg >
-            {myPokemon.img ? (
-              <img src={myPokemon.img} alt="" />
+            {myPokemon.img || myPokemon.image ? (
+                <img src={myPokemon.img || myPokemon.image} alt="" />
             ) : (
               <img src={"https://cdn.dribbble.com/users/1770381/screenshots/5500073/media/99f44446ca2bf79d18fca7403c712d1c.png?compress=1&resize=400x300&vertical=center"} alt="Imagen por defecto" />
             )}</div>
             <div className={style.detailp }>
-            <p>HP: {myPokemon.health || myPokemon.hp}</p>
-            <p>Attack: {myPokemon.attack}</p>
-            <p>Defense: {myPokemon.defense}</p>
-            <p>Speed: {myPokemon.speed}</p>
-            <p>Height: {myPokemon.height}</p>
-            <p>Weight: {myPokemon.weight}</p>
-            <div className={style.detailtype }>
+            <h2>HP:</h2>  <p> {myPokemon.health || myPokemon.hp}</p>
+            <h2>Attack:</h2> <p> {myPokemon.attack}</p>
+            <h2>Defense:</h2>  <p>{myPokemon.defense}</p>
+            <h2>Speed:</h2> <p>{myPokemon.speed}</p>
+            <h2>Height:</h2> <p> {myPokemon.height}</p>
+            <h2>Weight:</h2>  <p>{myPokemon.weight}</p>
             <h2>Type:</h2>
+            <div className={style.detailtype }>
+            
               {myPokemon.types?.map((t, index) => (
                 <span key={index}>
                   
@@ -62,7 +63,8 @@ export default function Detail(props) {
             </div>
           </div>
         ) : (
-          <p className={style.detailp }>Pokemon no encontrado</p>
+          <p className={style.detail404 }>Pokemon not found   <img src={"https://cdn.dribbble.com/users/1770381/screenshots/5500073/media/99f44446ca2bf79d18fca7403c712d1c.png?compress=1&resize=400x300&vertical=center"} alt="Imagen por defecto" /> </p>
+        
         )}
         <div >
       <Link to="/home">

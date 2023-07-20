@@ -3,6 +3,8 @@ import { GET_POKEMON, GET_ID_POKEMON, GET_TYPES,GET_NAME_POKEMON, FILTER_BY_TYPE
 
 let initialState ={
     pokemons: [],  //copia del estado de all pokemons que usaremos para sort y filter
+    pokemonsfiltered: [], 
+    pokemonsfiltered2:[], //
     allPokemons: [],
     detail: [],
     types: [],
@@ -16,7 +18,9 @@ switch (action.type) {
         return{
             ...state, 
             allPokemons: action.payload,
-            pokemons: action.payload
+            pokemons: action.payload,
+            pokemonsfiltered:action.payload,
+                pokemonsfiltered2:action.payload,
         }
        
         case GET_TYPES:
@@ -45,6 +49,8 @@ switch (action.type) {
               return {
                 ...state,
                 pokemons: filtered,
+                pokemonsfiltered:filtered,
+                pokemonsfiltered2:filtered,
               };
             }
                 // action.payload === "all"
@@ -56,16 +62,22 @@ switch (action.type) {
               
             
               case FILTER_IF_CREATED: {
-               
-                  const filtrado = action.payload === "created" ? state.pokemons.filter(el => typeof el.id !== 'number') : state.allPokemons.filter(el=> typeof el.id === 'number')
+                let filtrado;
+            
+                if (action.payload === "created") {
+                  filtrado = state.pokemonsfiltered.filter(el => typeof el.id !== 'number') 
+                } 
+                if(action.payload === "api") {filtrado = state.pokemonsfiltered2.filter(el=> typeof el.id === 'number')}
+                  
                   return{
                     ...state,
-                    pokemons: action.payload === "all" ? state.allPokemons : filtrado
+                    pokemons: action.payload === "all" ? state.pokemonsfiltered : filtrado
                   }
               }
             
               case ORDER_BY_NAME: {
-                let sortedArr = action.payload === "ascPokemon" ?
+                
+                let sortedArr = (action.payload === "ascPokemon" ?
                 state.pokemons.sort(function (a, b){
                   if (a.name.toLowerCase() > b.name.toLowerCase()) {
                     return 1;
@@ -83,10 +95,11 @@ switch (action.type) {
                     } else {
                       return 0;
                     }
-                })
+                }))
+                
                 return {
                   ...state,
-                  pokemons:  sortedArr
+                  pokemons: action.payload === "all" ? state.pokemons : sortedArr
                 }
               }
             

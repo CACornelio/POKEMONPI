@@ -1,0 +1,28 @@
+.SearchBar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .SearchBar input[type="text"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 18px;
+    width: 200px;
+  }
+  
+  .SearchBar button {
+    padding: 8px 16px;
+    background-color: #ff1f00;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .SearchBar button:hover {
+    background-color: lightpink;
+  }
+  
+  

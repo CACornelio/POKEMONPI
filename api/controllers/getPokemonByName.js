@@ -9,7 +9,7 @@ const getPokemonByName = async (req, res) => {
     let pokemon = await Pokemon.findOne({
       where: { name: {
         [Op.like]:name }}
-    }); // Busco en la base de datos un Pokémon con el nombre especificado
+    }); // Busco en la base de datos un Pokémon con el nombre parecido 
 
     if (pokemon) {
       // Si se encuentra el Pokémon en la base de datos

@@ -5,13 +5,14 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getPokemon, filterByType, filterIfCreated, orderByname, orderByAttack } from '../../Redux/actions'
 import { useState } from 'react'
 import Paginate from '../../Components/Paginate/Paginate'
+import SearchBar from '../../Components/SearchBar/searchBar'
 const Home = () => {
 
 
 const pokemon = useSelector((state)=> state.pokemons)
 const dispatch = useDispatch()
 const[orden, setOrden] = useState("")
-  const[attack, setAttack] = useState("")
+const[attack, setAttack] = useState("")
 
 ///pagination///
 const [currentPage, setCurrentPage] = useState(1);
@@ -68,6 +69,8 @@ function handleAttack(e) {
   setCurrentPage(1);
 }
 ///filters ///
+
+
 useEffect(() => {
 
 dispatch(getPokemon())
@@ -77,11 +80,14 @@ dispatch(getPokemon())
 console.log(pokemon)
 
   return (
-    
+    <div>
+      
     <div className={style.homecontainer}>
-    <h1>Home</h1>
+    
+    <h1>Kanto National Pokedex</h1>
     {/* FILTERS AND ORDERING */}
     <div className={style.filters}>
+    
            <div >
             <span>Tipos   </span>
             <select onChange={e => handleFilterType(e)}>
@@ -110,7 +116,7 @@ console.log(pokemon)
       <div>
         <span>Order by Alphabet  </span>
         <select onChange={e => handleSort(e)}>
-          <option value="OrdenBy">Alphabetical</option>
+          <option value="all">Alphabetical</option>
           <option value="ascPokemon">[A-Z]</option>
           <option value="descPokemon">[Z-A]</option>
         </select>
@@ -124,14 +130,14 @@ console.log(pokemon)
         </select>
       </div>
       <div>
-        <span>Attack  </span>
+        <span> Order By Attack  </span>
         <select  onChange={e => handleAttack(e)}>
-          <option value="all">Attack</option>
+          <option value="attack"> Attack</option>
           <option value="ascA">Least Attack</option>
           <option value="descA">Highest Attack</option>
         </select>
         </div> 
-        
+        <SearchBar currentPage={currentPage} setCurrentPage={setCurrentPage}/>
       </div> 
       {/* FILTERS AND ORDERING */}
 <div className={style.homepaginate}>
@@ -141,7 +147,7 @@ console.log(pokemon)
     </div>
     <Cards pokemon={currentPokemons}> </Cards>
     </div>
- 
+ </div>
     )
 }
 

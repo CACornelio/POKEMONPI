@@ -15,7 +15,7 @@ body {
   }
   
   .made {
-    margin-top: 50%;
+    margin:0;
   }
   
   .enterbutton {
@@ -26,7 +26,7 @@ body {
     background-color: #ff1f00;
     color: #fff;
     cursor: pointer;
-    margin: 10%;
+    margin: auto;
   }
   
   .landing {

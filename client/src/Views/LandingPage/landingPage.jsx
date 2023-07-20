@@ -15,14 +15,15 @@ const LandingPage = () => {
 ///this code adds a class to the body element when the component is mounted, which applies the background image defined in the CSS module. The class is removed when the component is unmounted to clean up after the component.///
   return (
     <div>
+      <h1>Made by Carlos Cornelio FT-38a</h1>
       <div className={style.landing}>
-       
+      
         <Link to="/home">
           <button className={style.enterbutton}>Enter</button>
         </Link>
       </div>
       <div className={style.made}>
-        <h1>Made by Carlos Cornelio FT-38a</h1>
+        
       </div>
     </div>
   );

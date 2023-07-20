@@ -27,18 +27,21 @@
     color: #333;
     margin-bottom: 10px;
     text-transform: capitalize;
-    text-decoration: none; /* Remove underline */
+    
   }
   
   .detailp span {
     margin-right: 5px;
-    text-decoration: none; /* Remove underline */
-    color: black; /* Set the text color to black */
+    color: black; 
+  }
+  .detailp p {
+    margin-right: 5px;
+    color: black; 
+    font-size: larger;
   }
   
-  
   .detailh1 {
-    font-size: 24px;
+    font-size: 40px;
     color: #333;
     margin-bottom: 20px;
     text-transform: capitalize;
@@ -68,8 +71,11 @@
     font-size: larger;
   }
   
-  .detailtype a {
-    color: #fff;
-    text-decoration: none;
+  .detail404{
+    font-size: x-large;
   }
-  
+  .detailp h2 {
+    text-align: start;
+  }
+
+ 
