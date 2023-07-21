@@ -78,11 +78,11 @@ switch (action.type) {
               case ORDER_BY_NAME: {
                 
                 let sortedArr = (action.payload === "ascPokemon" ?
-                state.pokemons.sort(function (a, b){
+                state.pokemons.sort(function (a, b){ 
                   if (a.name.toLowerCase() > b.name.toLowerCase()) {
-                    return 1;
+                    return 1; 
                   } else if (a.name.toLowerCase() < b.name.toLowerCase()) {
-                    return -1;
+                    return -1; // Si la función de comparación devuelve un valor negativo, significa que el primer elemento (a) debe ser ordenado antes que el segundo elemento (b).
                   } else {
                     return 0;
                   }

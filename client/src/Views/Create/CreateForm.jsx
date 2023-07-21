@@ -192,6 +192,8 @@ function handleSelect(e) {
 const handleSubmit=(e)=>{
   e.preventDefault();
   dispatch(postPokemon(input))
+  const form = document.getElementById("form");
+  form.reset()
 
 }
 const handleChange = (event) => {
@@ -212,7 +214,7 @@ const handleChange = (event) => {
       
 
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} id='form'> 
         {console.log(input)}
         <div className={style.forminput}> 
             <label>Name:  </label>

@@ -77,7 +77,7 @@ dispatch(getPokemon())
 
 }, [])
 
-console.log(pokemon)
+// console.log(pokemon)
 
   return (
     <div>
